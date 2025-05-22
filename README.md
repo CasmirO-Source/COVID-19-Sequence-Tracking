@@ -1,5 +1,7 @@
 COVID-19 Sequence Analysis Script
-## About Me
+
+
+## About Me
 I developed this Python script as part of my self-study to explore how DNA or RNA sequences (like those from COVID-19) can be analyzed to trace their origins. I’m excited about applying these skills in a bioinformatics role to contribute to genomic research!
 
 # What This Script Does
