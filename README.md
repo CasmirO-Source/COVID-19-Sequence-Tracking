@@ -70,5 +70,6 @@ I hardcoded the countries (AGO, IOT) for this example, but it could be more flex
 - Make it faster for bigger data sets
 
 # Why I’m a Good Fit
+
 This project shows my ability to write clear Python code and understand sequence analysis concepts. I’m excited to grow my skills in bioinformatics, especially in applying computational methods to real-world problems like disease tracking. I’m a quick learner and ready to dive into advanced techniques during my MSc and in a bioinformatics role!
 Thanks for considering my work! Please let me know if you have feedback or want to see more of my projects. 
