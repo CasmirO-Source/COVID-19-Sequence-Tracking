@@ -12,12 +12,11 @@ This script analyses COVID-19 sequence data to:
 3. Identify the closest human sequence to a bat sequence.
 4. Find potential transmission links between sequences from different countries (e.g., Angola to British Indian Ocean Territory).
 
-It helps figure out which sequences are most similar and might show how a virus spread!
+It helps figure out which sequences are most similar and might show how a virus spreads
 
 # Requirements
 
 Python: Version 3.6 or higher (I used 3.8).
-No external libraries: Just standard Python!
 
 # Input Files:
 Human-Covid19.txt: Contains human sequence records (format: country code, ID, sequence, separated by spaces).
@@ -72,4 +71,4 @@ I hardcoded the countries (AGO, IOT) for this example, but it could be more flex
 # Why I’m a Good Fit
 
 This project shows my ability to write clear Python code and understand sequence analysis concepts. I’m excited to grow my skills in bioinformatics, especially in applying computational methods to real-world problems like disease tracking. I’m a quick learner and ready to dive into advanced techniques during my MSc and in a bioinformatics role.
-Thanks for considering my work! Please let me know if you have feedback or want to see more of my projects. 
+Thanks for considering my work. Please let me know if you have feedback or want to see more of my projects. 
