@@ -2,7 +2,7 @@ COVID-19 Sequence Analysis Script
 
 
 # About Me
-I developed this Python script as part of my self-study to explore how DNA or RNA sequences (like those from COVID-19) can be analyzed to trace their origins. I’m excited about applying these skills in a bioinformatics role to contribute to genomic research!
+I developed this Python script as part of my self-study to explore how DNA or RNA sequences (like those from COVID-19) can be analysed to trace their origins. I’m excited about applying these skills in a bioinformatics role to contribute to genomic research.
 
 # What This Script Does
 This script analyses COVID-19 sequence data to:
@@ -53,7 +53,7 @@ Country: AGO, Unique ID: ID123, Distance: 0.125
 Unique ID Origin(IOT): ID456, Unique ID Target(AGO): ID123, Distance: 0.125
 
 # Why This Matters for Bioinformatics?
-This script is an example of sequence analysis, which is super important in bioinformatics for studying virus evolution, tracking outbreaks, or comparing genomes. I built it to practice handling sequence data and calculating distances, which are key skills for genomic research. I’m eager to learn more advanced tools like BLAST or Biopython during my MSc to tackle bigger datasets!
+This script is an example of sequence analysis, which is super important in bioinformatics for studying virus evolution, tracking outbreaks, or comparing genomes. I built it to practice handling sequence data and calculating distances, which are key skills for genomic research. I’m eager to learn more advanced tools like BLAST or Biopython during my MSc to tackle bigger datasets.
 
 # Limitations
 
@@ -71,5 +71,5 @@ I hardcoded the countries (AGO, IOT) for this example, but it could be more flex
 
 # Why I’m a Good Fit
 
-This project shows my ability to write clear Python code and understand sequence analysis concepts. I’m excited to grow my skills in bioinformatics, especially in applying computational methods to real-world problems like disease tracking. I’m a quick learner and ready to dive into advanced techniques during my MSc and in a bioinformatics role!
+This project shows my ability to write clear Python code and understand sequence analysis concepts. I’m excited to grow my skills in bioinformatics, especially in applying computational methods to real-world problems like disease tracking. I’m a quick learner and ready to dive into advanced techniques during my MSc and in a bioinformatics role.
 Thanks for considering my work! Please let me know if you have feedback or want to see more of my projects. 
