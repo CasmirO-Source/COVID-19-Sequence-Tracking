@@ -1,74 +1,47 @@
-COVID-19 Sequence Analysis Script
+# COVID-19 Sequence Tracking
 
+A Python script that compares COVID-19 genome sequences to find which human sample is closest to a bat virus sample, and which pair of samples from two countries is most likely to show a transmission link. I wrote it as part of my self-study before my MSc, using plain Python with no libraries so I had to handle the file parsing and comparison logic myself.
 
-# About Me
-I developed this Python script as part of my self-study to explore how DNA or RNA sequences (like those from COVID-19) can be analysed to trace their origins. I’m excited about applying these skills in a bioinformatics role to contribute to genomic research.
+## The data
 
-# What This Script Does
-This script analyses COVID-19 sequence data to:
+- `Human-Covid19.txt`: 187 human virus sequences from 5 countries, each about 29,840 letters long
+- `Bat-Covid19.txt`: one bat virus sequence in the same format
 
-1. Load sequence records from a file (e.g., country, ID, and sequence).
-2. Compare sequences to find similarities (e.g., between bat and human COVID-19 sequences).
-3. Identify the closest human sequence to a bat sequence.
-4. Find potential transmission links between sequences from different countries (e.g., Angola to British Indian Ocean Territory).
+Each line holds a country code, a unique ID and the sequence, separated by tabs.
 
-It helps figure out which sequences are most similar and might show how a virus spreads
+## What it does
 
-# Requirements
+1. **Loads** every record from both files.
+2. **Measures distance** between two sequences as the share of positions where the letters differ. A distance of 0.05 means 5% of positions are different.
+3. **Finds the closest human sequence** to the bat sequence by comparing it against all 187.
+4. **Finds the likeliest transmission pair** between two countries (Angola and the British Indian Ocean Territory). For every Angolan sample it finds the closest match in the other country, then keeps the closest pair overall.
 
-Python: Version 3.6 or higher (I used 3.8).
+## Output
 
-# Input Files:
-Human-Covid19.txt: Contains human sequence records (format: country code, ID, sequence, separated by spaces).
-Bat-Covid19.txt: Contains a single bat sequence record (same format).
+```
+Country: DZA, Unique ID: 022-NABAXH, Distance: 0.04601206434316352
+Unique ID Origin(AGO): 008-PDHKJM, Unique ID Target(IOT): 003-GFFUOL, Distance: 0.042593833780160906
+```
 
+So the human sample closest to the bat virus is from Algeria, with about 4.6% of positions different. The closest Angola to British Indian Ocean Territory pair differ at about 4.3% of positions.
 
-Note: The files must be in the same folder as the script, and sequences should be valid strings (e.g., ATCG).
+## Limitations
 
-# How to Run It
+- The distance measure compares position by position, so it assumes the sequences are already aligned and the same length. Alignment tools such as BLAST account for insertions and deletions.
+- There's no error checking, so a badly formatted file will crash it.
+- The two countries are hard-coded at the bottom of the script.
 
-1. Save the script as sequence_analysis.py.
-2. Create or download Human-Covid19.txt and Bat-Covid19.txt with the correct format.
-3. Open a terminal in VS Code (or elsewhere) and navigate to the script’s folder.
-4. Run the script:python sequence_analysis.py
+## What I'd do next
 
+- Take the file names and countries as command-line arguments
+- Add input validation with clear error messages
+- Use Biopython for alignment-based comparison
+- Write results to a CSV instead of printing them
 
-The script will:
-- Print the closest human sequence to the bat sequence (country, ID, and distance).
-- Show the most likely transmission pair between Angola (AGO) and British Indian Ocean Territory (IOT).
+## Running it
 
+Needs Python 3, nothing else. With both data files in the same folder:
 
-
-# Example Output
-If Human-Covid19.txt has:
-AGO ID123 ATCGATCG
-IOT ID456 ATAGATCG
-
-And Bat-Covid19.txt has:
-BAT ID789 ATCGATAG
-
-The output might look like:
-Country: AGO, Unique ID: ID123, Distance: 0.125
-Unique ID Origin(IOT): ID456, Unique ID Target(AGO): ID123, Distance: 0.125
-
-# Why This Matters?
-This script is an example of sequence analysis, which is super important in data science for studying virus evolution, tracking outbreaks, or comparing genomes. I built it to practice handling sequence data and calculating distances, which are key skills for genomic research. I’m eager to learn more advanced tools like BLAST or Biopython during my MSc to tackle bigger datasets.
-
-# Limitations
-
-The script assumes files are formatted correctly (no error checking).
-It uses a basic distance metric (not as fancy as BLAST or alignment algorithms).
-It’s not optimised for huge datasets, but it works for small ones.
-I hardcoded the countries (AGO, IOT) for this example, but it could be more flexible.
-
-# Future Improvements
-
-- Find a way to add error handling for bad files or sequences.
-- Use Biopython for more accurate sequence alignment.
-- Make the country codes an input so users can choose them.
-- Make it faster for bigger data sets
-
-# Why I’m a Good Fit
-
-This project shows my ability to write clear Python code and understand sequence analysis concepts. I’m excited to grow my skills in data science, especially in applying computational methods to real-world problems like disease tracking. I’m a quick learner and ready to dive into advanced techniques during my MSc and in a bioinformatics role.
-Thanks for considering my work. Please let me know if you have feedback or want to see more of my projects. 
+```bash
+python COVID-19-Assignment.py
+```

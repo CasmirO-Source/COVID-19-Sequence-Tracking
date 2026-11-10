@@ -157,13 +157,13 @@ def PrintTransmitter(list_of_records, origin_country, target_country):
             smallest_record_target = closest_record
             # Update value for record
 
-    print("Unique ID Origin({}): {}, Unique ID Target({}): {}, Distance: {}".format(smallest_record_target[0], smallest_record_target[1], smallest_record_origin[0], smallest_record_origin[1], smallest_distance))
+    print("Unique ID Origin({}): {}, Unique ID Target({}): {}, Distance: {}".format(smallest_record_origin[0], smallest_record_origin[1], smallest_record_target[0], smallest_record_target[1], smallest_distance))
     # Output the Records and their distance
 
 
 myRecord = FindClosestRecord(BatSeq, Records)
 value = SequenceDistance(myRecord[2], BatSeq)
-print("County: {}, Unique ID: {}, Distance: {}".format(myRecord[0], myRecord[1], value))
+print("Country: {}, Unique ID: {}, Distance: {}".format(myRecord[0], myRecord[1], value))
 
 PrintTransmitter(Records, "AGO", "IOT")
 
